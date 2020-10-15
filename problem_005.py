@@ -82,18 +82,23 @@ def initial_check(lst):
         if len(indices) > len(lst) / 2:
             return True
 
-
+# this is a debug function. It's used to check if the output list
+# is correct and not two same characters are adjacent
 def check_assignments(output):
+    # init variables
     check_num = 0
     error = False
     for i in output:
+        # break if check_num exceeded length of output list
         if check_num == len(output) - 1: break
+        # print an error if two same characters are adjacent
         if i == output[check_num - 1] or \
         i == output[check_num + 1]:
             error = True
             print("set error to true at: " + str(check_num))
+        # increment index checker
         check_num += 1
-
+        
     if error:
         print("wrong list assignment found!")
     else:
