@@ -1,3 +1,5 @@
+# problem: https://mailchi.mp/2e581d0e537a/1-coding-problem-easy?e=6de8a670d8
+
 def check(num_list, k):
     # create new list without numbers > k
     reduced_nums = [num for num in num_list if num <= k]

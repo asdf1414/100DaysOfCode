@@ -1,3 +1,5 @@
+# problem: https://mailchi.mp/458e6e41711b/problem-5?e=6de8a670d8
+
 import string, random, time
 
 start_time = time.time()

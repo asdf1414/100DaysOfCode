@@ -1,3 +1,5 @@
+// problem: https://mailchi.mp/2e581d0e537a/1-coding-problem-easy?e=6de8a670d8
+
 var numbers = [10, 15, 3, 7];
 var k = 17;
 

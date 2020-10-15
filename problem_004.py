@@ -1,3 +1,5 @@
+# problem: https://mailchi.mp/8eff78c23e23/probelm-4-hard?e=6de8a670d8
+
 import random
 
 # style 1: one list for all persons, sort inside the list itself

@@ -1,3 +1,5 @@
+# problem: https://mailchi.mp/bbaf3fe2e28b/problem-3-medium?e=6de8a670d8
+
 def generate_primes(n):
     # generate list of all odd numbers from 2 to n
     primes = [i for i in range(2, n + 1) if i%2 != 0 or i == 2]
