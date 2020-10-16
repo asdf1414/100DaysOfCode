@@ -1,6 +1,6 @@
 # problem: https://mailchi.mp/458e6e41711b/problem-5?e=6de8a670d8
 
-import string, random, time
+import string, random, time, xlsxwriter
 
 
 def search_duplicates(lst):
@@ -106,11 +106,13 @@ def check_assignments(output):
         print("list correctly assigned")
 
 
+# below here is just data collection for 
+# the time analysis of this algorithm above
 inc_list = []
 dur_list = []
 incrementor = 0
 
-for i in range(0,2):
+for i in range(0,500):
     incrementor += 1000
     input_list = []
     # generates a list of randomly placed characters from a-z
@@ -127,13 +129,11 @@ for i in range(0,2):
     duration = end_time - start_time
     inc_list.append(incrementor)
     dur_list.append(duration)
-    print(inc_list, dur_list)
+    
+xlsx_list = [inc_list, dur_list]
 
+with xlsxwriter.Workbook('problem_005-time-analysis.xlsx') as workbook:
+    worksheet = workbook.add_worksheet()
 
-for i in incrementor:
-    f = open("incrementor.txt", "a")
-    f.write(str(i) + "\n")
-    f.close()
-    f = open("duration.txt", "a")
-    f.write(str(i) + "\n")
-    f.close()
+    for row_num, data in enumerate(xlsx_list):
+        worksheet.write_row(row_num, 0, data)
