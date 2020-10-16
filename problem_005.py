@@ -2,7 +2,6 @@
 
 import string, random, time
 
-start_time = time.time()
 
 def search_duplicates(lst):
     # declare variables
@@ -107,18 +106,34 @@ def check_assignments(output):
         print("list correctly assigned")
 
 
-input_list = []
-# generates a list of randomly placed characters from a-z
-# within the given range (e.g. 100'000)
-for i in range(0, 100000):
-    alphabet = string.ascii_lowercase
-    rdm_index = random.randrange(0, 25)
-    input_list.append(alphabet[rdm_index])
+inc_list = []
+dur_list = []
+incrementor = 0
+
+for i in range(0,2):
+    incrementor += 1000
+    input_list = []
+    # generates a list of randomly placed characters from a-z
+    # within the given range (e.g. 100'000)
+    for i in range(0, incrementor):
+        alphabet = string.ascii_lowercase
+        rdm_index = random.randrange(0, 25)
+        input_list.append(alphabet[rdm_index])
+
+    start_time = time.time()
+    output = search_duplicates(input_list)
+    end_time = time.time()
+
+    duration = end_time - start_time
+    inc_list.append(incrementor)
+    dur_list.append(duration)
+    print(inc_list, dur_list)
 
 
-output = search_duplicates(input_list)
-check_assignments(output)
-
-end_time = time.time()
-
-print(str(end_time - start_time) + "s")
+for i in incrementor:
+    f = open("incrementor.txt", "a")
+    f.write(str(i) + "\n")
+    f.close()
+    f = open("duration.txt", "a")
+    f.write(str(i) + "\n")
+    f.close()
