@@ -56,7 +56,7 @@ def search_overlap(lst):
         else:
             filter_idx += 1
     
-    return amount_to_delete, overview, lst
+    return amount_to_delete
 
 
 intervals = [[1,5], [7,11], [10,13], [4,6], [13,15], [15,16]]
