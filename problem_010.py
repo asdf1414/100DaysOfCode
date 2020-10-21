@@ -1,5 +1,4 @@
 # problem: https://mailchi.mp/59f844f71f1c/problem-10?e=6de8a670d8
-# approach: binary search since the list is sorted ascending
 
 def search_pivot(lst):
     # return if list has only one element
