@@ -1,8 +1,6 @@
 # problem: https://mailchi.mp/59f844f71f1c/problem-10?e=6de8a670d8
 # approach: binary search since the list is sorted ascending
 
-import random
-
 def search_pivot(lst):
     # return if list has only one element
     if len(lst) == 1:
@@ -37,5 +35,4 @@ def search_pivot(lst):
 
 # Driver code
 lst = [5,7,10,3,4]
-
 print(search_pivot(lst))
