@@ -12,14 +12,12 @@ def search_pivot(lst):
         # define middle element of current list part
         mid = int((start + (end - start)) / 2)
 
-        # check if current mind is smaller than left neighbour
-        # if true: return current mid (found smallest)
+        # check if current mind is smaller than left or bigger 
+        # than right neighbour
+        # if true: return current mid or mid+1 (found smallest)
         if lst[mid] < lst[mid - 1]:
             return lst[mid]
-
-        # check if current mid is bigger than the right neighbour
-        # if true: retunr current mid (found smallest)
-        if lst[mid] > lst[mid + 1]:
+        elif lst[mid] > lst[mid + 1]:
             return lst[mid + 1]
         
         # main algorithm logic. This comparsion checks if it should 
