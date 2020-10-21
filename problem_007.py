@@ -1,4 +1,9 @@
-# problem: https://mailchi.mp/bcd73dca2f47/problem-6?e=6de8a670d8
+################################################################################
+# Suppose you are given two lists of n points, one list p1, p2, ..., pn on 
+# the line y = 0 and the other list q1, q2, ..., qn on the line y = 1. 
+# Imagine a set of n line segments connecting each point pi to qi. 
+# Write an algorithm to determine how many pairs of the line segments intersect.
+################################################################################
 # this solution should have a time complexity of O(n^2)
 
 import random

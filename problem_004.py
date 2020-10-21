@@ -1,4 +1,8 @@
-# problem: https://mailchi.mp/8eff78c23e23/probelm-4-hard?e=6de8a670d8
+################################################################################
+# There are N couples sitting in a row of length 2 * N. They are currently 
+# ordered randomly, but would like to rearrange themselves so that each 
+# couple's partners can sit side by side.
+################################################################################
 
 import random
 

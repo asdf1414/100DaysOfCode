@@ -1,4 +1,9 @@
-# problem: https://mailchi.mp/59f844f71f1c/problem-10?e=6de8a670d8
+################################################################################
+# Suppose an array sorted in ascending order is rotated at some pivot unknown 
+# to you beforehand. Find the minimum element in O(log N) time. You may 
+# assume the array does not contain duplicates. For example, 
+# given [5, 7, 10, 3, 4], return 3.
+################################################################################
 
 def search_pivot(lst):
     # return element if list has only one element
@@ -27,5 +32,6 @@ def search_pivot(lst):
         else:
             end = mid - 1
 
+# Driver code
 lst = [6,7,8,9,10,4]
 print(search_pivot(lst))
